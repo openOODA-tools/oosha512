@@ -1,0 +1,14 @@
+Source: oosha512
+Section: utils
+Priority: optional
+Maintainer: openOODA-tools <ops@openooda.org>
+Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13)
+
+Package: oosha512
+Architecture: amd64
+Depends: libc6
+Description: SHA512 HASHER
+ High-capacity SHA-512 cryptographic digest generator with binary output mode.
+ Capability-bounded openOODA utility with zero ambient authority,
+ oote theme palettes, and native Model Context Protocol (MCP) surface.

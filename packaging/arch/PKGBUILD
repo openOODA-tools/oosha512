@@ -1,0 +1,21 @@
+# Maintainer: openOODA-tools <ops@openooda.org>
+pkgname=oosha512-bin
+_pkgname=oosha512
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="High-capacity SHA-512 cryptographic digest generator with binary output mode."
+arch=('x86_64')
+url="https://github.com/openOODA-tools/oosha512"
+license=('Apache-2.0')
+depends=('glibc')
+provides=('oosha512')
+conflicts=('oosha512')
+source_x86_64=("${url}/releases/download/v${pkgver}/oosha512-linux-x86_64"
+               "uninstall.sh::https://raw.githubusercontent.com/openOODA-tools/${_pkgname}/v${pkgver}/uninstall.sh")
+sha256sums_x86_64=('SKIP'
+                   'SKIP')
+
+package() {
+    install -Dm755 "${srcdir}/oosha512-linux-x86_64" "${pkgdir}/usr/bin/oosha512"
+    install -Dm755 uninstall.sh "${pkgdir}/usr/bin/oosha512-uninstall"
+}
